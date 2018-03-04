@@ -3,6 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <properties>
     <jclouds.version>2.1.0</jclouds.version>
+    <slf4jVersion>1.7.25</slf4jVersion>
   </properties>
   <groupId>com.innerdot.jclouds.compute</groupId>
   <artifactId>simple_node</artifactId>
@@ -29,36 +30,19 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.jclouds.driver</groupId>
-      <artifactId>jclouds-bouncycastle</artifactId>
-      <version>${jclouds.version}</version>
-      <exclusions>
-        <!-- bouncy castle is a provider, so
-			it must be signed and used as-is.
-             we are doing this to prevent its
-             classes from getting into the
-             jar-with-dependencies -->
-        <exclusion>
-          <groupId>org.bouncycastle</groupId>
-          <artifactId>bcprov-jdk16</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.jclouds.driver</groupId>
-      <artifactId>jclouds-sshj</artifactId>
-      <version>${jclouds.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.jclouds.driver</groupId>
-      <artifactId>jclouds-enterprise</artifactId>
-      <version>${jclouds.version}</version>
-    </dependency>
-    <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>1.0.9</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4jVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4jVersion}</version>
+    </dependency>
   </dependencies>
 </project>
