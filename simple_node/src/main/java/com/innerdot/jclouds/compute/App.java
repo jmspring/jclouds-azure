@@ -24,10 +24,6 @@ import static com.google.common.collect.Iterables.getFirst;
 import static org.jclouds.compute.config.ComputeServiceProperties.TIMEOUT_SCRIPT_COMPLETE;
 import static org.jclouds.compute.options.TemplateOptions.Builder.runScript;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     // Provider to use
